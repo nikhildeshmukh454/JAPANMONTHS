@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    background: url('img/BackGround.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #ff4747, #ff0000);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Adjusted for better logo visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 180px;
+}
+
+/* Introduction Section Styling */
+.intro {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-bottom: 0%;
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.intro h1 {
+    color: #ff0000;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Event Section Styling */
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+h2 {
+    color: #ff0000;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+/* Style for Events Section */
+.events {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ff0000;
+}
+
+/* Horizontal Scroll Styling */
+.event-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Ensures each item snaps into place */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Individual Event Box Styling */
+.event-box {
+    flex: 0 0 300px; /* Fixed width for each event box */
+    background-color: #fff;
+    border: 2px solid #ffcccc; /* Softer red border */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center; /* Snap event box to center when scrolling */
+}
+
+.event-box:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.event-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.event-box h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-box p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Hide default scrollbar for better appearance */
+.event-container::-webkit-scrollbar {
+    display: none;
+}
+
+.event-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .event-box {
+        flex: 0 0 250px; /* Smaller event boxes on smaller screens */
+    }
+}
+
+
+/* Calendar Section */
+.calendar-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4); /* Transparent background */
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.calendar-section iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Photo Gallery Section */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05); /* Enlarge slightly on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.intro small{
+background-color: whitesmoke;
+padding: 3px;
+border-radius: 30%;
+}
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .event-box {
+        width: 90%;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .intro {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .event-box h3 {
+        font-size: 1.4rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+
+header {
+    background-color: #ff0000; /* Red background */
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Make sure header stays on top */
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-left,
+.logo-right {
+    width: 100px; /* Adjust the size of the logos */
+    height: auto;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
